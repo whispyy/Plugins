@@ -2,6 +2,7 @@ import java.awt.event.ActionEvent;
 import java.io.File;
 import java.lang.reflect.Array;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
@@ -33,7 +34,7 @@ public class PluginFinder implements ActionListener{
 	}
 	
 	public Set<File> listFiles(){
-		return new HashSet<File>(Array.aslist(directory.listFiles(filter)));
+		return new HashSet<File>(Arrays.asList(directory.listFiles(filter)));
 	}
 	
 	protected void notifyListener(File file){
