@@ -1,3 +1,4 @@
+import java.awt.event.ActionEvent;
 import java.io.File;
 import java.lang.reflect.Array;
 import java.util.ArrayList;
@@ -50,4 +51,6 @@ public class PluginFinder implements ActionListener{
 	public synchronized void addListener(PluginEventListener listener){
 		listeners.add(listener);
 	}
+
+	
 }

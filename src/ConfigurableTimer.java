@@ -1,7 +1,11 @@
+import java.awt.event.ActionEvent;
+
+import javax.swing.Timer;
+
 
 public class ConfigurableTimer implements ActionListener{
 	protected final int maxIteration;
-	protected final int nbrIteration;
+	protected int nbrIteration;
 	protected final ActionListener listener;
 	
 	public ConfigurableTimer(ActionListener l, int maxIteration){
@@ -16,7 +20,7 @@ public class ConfigurableTimer implements ActionListener{
 	
 	public void start(int milliseconds){
 		nbrIteration = 0;
-		Timer timer = new ConfigurableTimer(milliseconds,this);
+		Timer timer = new Timer(milliseconds,(java.awt.event.ActionListener) this);
 		timer.start();
 		while(maxIteration == 0 || nbrIteration < maxIteration){
 			System.err.print("");
