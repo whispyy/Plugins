@@ -1,3 +1,5 @@
+package Plugin;
+
 
 public class PluginAddLogger implements PluginEventListener{
 

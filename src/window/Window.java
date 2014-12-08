@@ -5,6 +5,7 @@ import java.awt.GraphicsConfiguration;
 import java.awt.HeadlessException;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.File;
 
 import javax.swing.JFrame;
 import javax.swing.JMenu;
@@ -13,8 +14,11 @@ import javax.swing.JMenuItem;
 import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 import javax.swing.JTextArea;
-import javax.swing.JTextField;
-import javax.swing.JTextPane;
+/*import javax.swing.JTextField;
+import javax.swing.JTextPane;*/
+
+import Plugin.PluginEventListener;
+import Plugin.PluginFinder;
 
 public class Window extends JFrame {
 
@@ -27,8 +31,11 @@ public class Window extends JFrame {
 	private JMenuItem clear, exit;
 	private JPanel menu_panel;
 	private JPanel text_panel;
-	
 	private JTextArea text_field;
+	
+	private final File myplug = new File("./myplug");
+	private final PluginFinder finder = new PluginFinder(myplug);
+	
 	
 	public Window() throws HeadlessException {
 		super();
@@ -55,6 +62,8 @@ public class Window extends JFrame {
 	}
 	
 	private void initWindow(){
+		if (!this.myplug.exists())
+			this.myplug.mkdir();
 		this.menu_panel = new JPanel();
 		this.text_panel = new JPanel();
 		this.text_field = new JTextArea(30, 100);
@@ -83,6 +92,7 @@ public class Window extends JFrame {
 		
 		this.menu.add(file);
 		this.menu.add(plugins);
+		/*this.finder.addListener((PluginEventListener) plugins);*/
 		this.file.add(clear);
 		this.file.add(exit);
 		this.exit.addActionListener(new ActionListener(){
@@ -100,6 +110,6 @@ public class Window extends JFrame {
 	}
 	
 	public static void main(String args[]){
-		Window w = new Window();
+		new Window();
 	}
 }
