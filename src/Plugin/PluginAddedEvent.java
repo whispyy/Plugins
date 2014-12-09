@@ -2,7 +2,11 @@ package Plugin;
 
 import java.io.File;
 
-
+/**
+ * 
+ * @author Jean-Frédéric Durand, Timothée Lefevbre
+ *
+ */
 public class PluginAddedEvent implements Plugin{
 
 	private File f;
