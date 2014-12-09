@@ -7,7 +7,7 @@ import javax.swing.Timer;
 
 /**
  * 
- * @author Jean-Frédéric Durand, Timothée Lefevbre
+ * @author Jean-Frédéric Durand, Timothée Lefebvre
  *
  */
 public class ConfigurableTimer implements ActionListener{

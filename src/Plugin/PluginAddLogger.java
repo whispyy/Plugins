@@ -1,6 +1,10 @@
 package Plugin;
 
-
+/**
+ * 
+ * @author Jean-Frédéric Durand, Timothée Lefebvre
+ *
+ */
 public class PluginAddLogger implements PluginEventListener{
 
 	@Override
