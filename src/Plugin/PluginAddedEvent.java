@@ -4,7 +4,7 @@ import java.io.File;
 
 /**
  * 
- * @author Jean-FrŽdŽric Durand, TimothŽe Lefevbre
+ * @author Jean-Frï¿½dï¿½ric Durand, Timothï¿½e Lefevbre
  *
  */
 public class PluginAddedEvent implements Plugin{
@@ -28,17 +28,29 @@ public class PluginAddedEvent implements Plugin{
 			this.f = file;
 	}
 
+	/**
+	 * Gives the file's name
+	 * @return the file's name
+	 */
 	public String getFile() {
 		return this.f.getName();
 	}
 
 	@Override
+	/*
+	 * (non-Javadoc)
+	 * @see Plugin.Plugin#transform(java.lang.String)
+	 */
 	public String transform(String s) {
 		// TODO Auto-generated method stub
 		return this.i.transform(s);
 	}
 
 	@Override
+	/*
+	 * (non-Javadoc)
+	 * @see Plugin.Plugin#getLabel()
+	 */
 	public String getLabel() {
 		// TODO Auto-generated method stub
 		return this.i.getLabel();
