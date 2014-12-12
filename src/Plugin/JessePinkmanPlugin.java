@@ -1,11 +1,8 @@
 package Plugin;
 
 
-public class JessePinkman implements Plugin {
+public class JessePinkmanPlugin implements Plugin {
 
-	public JessePinkman() {
-		// TODO Auto-generated constructor stub
-	}
 
 	@Override
 	public String transform(String s) {
